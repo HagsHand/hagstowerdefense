@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Brasil Escondido — Tower Defense do Folclore Brasileiro</title>
+<meta name="description" content="O Brasil Escondido é um jogo de Tower Defense inspirado no folclore brasileiro. Defenda a Mata contra as sombras ao lado de Saci, Curupira, Iara, Boitatá e outras entidades da floresta.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Fireflies (elemento assinatura, gerado via JS) -->
+<div class="fireflies" id="fireflies" aria-hidden="true"></div>
+
+<!-- ===== CABEÇALHO / MENU ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#topo" class="logo" aria-label="O Brasil Escondido — início">
+      <img src="images/logo.png" alt="" class="logo-img" onerror="this.style.display='none'">
+      <span class="logo-text">
+        <span class="logo-line1">O Brasil</span>
+        <span class="logo-line2">Escondido</span>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#topo" class="nav-link">Início</a></li>
+        <li><a href="#sobre" class="nav-link">O Jogo</a></li>
+        <li><a href="#criaturas" class="nav-link">Criaturas</a></li>
+        <li><a href="#proposta" class="nav-link">A Mata Precisa de Você</a></li>
+        <li><a href="#rodape" class="nav-link nav-cta">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="topo">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow">Um Tower Defense de encantamentos e raízes</p>
+      <h1>O Brasil<br>Escondido</h1>
+      <p class="hero-sub">
+        Sob o breu da mata, entre luzes-do-mato e cantos de saracura,
+        vive um Brasil que os mapas não desenham. Chame o Saci,
+        desperte o Curupira e plante suas defesas antes que a noite
+        engula a última clareira.
+      </p>
+      <div class="hero-actions">
+        <a href="#criaturas" class="btn btn-primary">Conhecer as Criaturas</a>
+        <a href="#sobre" class="btn btn-ghost">Sobre o Jogo</a>
+      </div>
+    </div>
+
+    <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== SOBRE O JOGO ===== -->
+  <section class="section about" id="sobre">
+    <div class="section-inner">
+      <p class="eyebrow">O jogo</p>
+      <h2>A mata tem donos. E eles não são gentis com quem a destrói.</h2>
+      <p class="lead">
+        <strong>O Brasil Escondido</strong> é um Tower Defense em que você planta,
+        invoca e comanda guardiões do folclore brasileiro para proteger os
+        últimos refúgios da mata contra hordas de corrupção — máquinas de
+        desmatamento, espíritos gananciosos e pragas vindas de fora.
+      </p>
+      <p>
+        Cada torre é uma lenda. Cada onda é uma noite mais escura. Cada
+        clareira salva é um pedaço do Brasil que continua de pé — vivo,
+        misterioso e seu.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-mark">raiz</span>
+          <h3>Lendas jogáveis</h3>
+          <p>Cada criatura do folclore vira uma torre com poderes e manhas próprias.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark">mata</span>
+          <h3>Biomas vivos</h3>
+          <p>Mata Atlântica, Cerrado, Amazônia e Pantanal como cenários de defesa.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark">noite</span>
+          <h3>Estratégia e mistério</h3>
+          <p>Combine feitiços, armadilhas e criaturas para resistir até o amanhecer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CRIATURAS ===== -->
+  <section class="section creatures" id="criaturas">
+    <div class="section-inner">
+      <p class="eyebrow">Guardiões da mata</p>
+      <h2>Conheça as Criaturas</h2>
+      <p class="lead">
+        Figuras que sua avó já contou, agora prontas para lutar ao seu lado
+        — ou contra você, se a mata não for respeitada.
+      </p>
+
+      <div class="creature-grid">
+
+        <article class="creature-card" data-creature="saci">
+          <div class="creature-visual saci-visual">
+            <img src="images/creatures/saci.png" alt="Saci-Pererê" onerror="this.style.display='none'">
+          </div>
+          <div class="creature-body">
+            <h3>Saci-Pererê</h3>
+            <p class="creature-role">Torre de Sabotagem</p>
+            <p>Um perna-só de gorro vermelho que atrasa e confunde inimigos com redemoinhos travessos.</p>
+            <button class="btn btn-small" type="button" data-creature-btn="saci">Conhecer o Saci</button>
+          </div>
+        </article>
+
+        <article class="creature-card" data-creature="curupira">
+          <div class="creature-visual curupira-visual">
+            <img src="images/creatures/curupira.png" alt="Curupira" onerror="this.style.display='none'">
+          </div>
+          <div class="creature-body">
+            <h3>Curupira</h3>
+            <p class="creature-role">Torre Guardiã</p>
+            <p>Pés virados para trás confundem quem invade a mata. Defesa pesada e implacável.</p>
+            <button class="btn btn-small" type="button" data-creature-btn="curupira">Conhecer o Curupira</button>
+          </div>
+        </article>
+
+        <article class="creature-card" data-creature="iara">
+          <div class="creature-visual iara-visual">
+            <img src="images/creatures/iara.png" alt="Iara" onerror="this.style.display='none'">
+          </div>
+          <div class="creature-body">
+            <h3>Iara</h3>
+            <p class="creature-role">Torre de Encantamento</p>
+            <p>Seu canto atrai inimigos para as águas, prendendo-os no lugar certo, na hora certa.</p>
+            <button class="btn btn-small" type="button" data-creature-btn="iara">Conhecer a Iara</button>
+          </div>
+        </article>
+
+        <article class="creature-card" data-creature="boitata">
+          <div class="creature-visual boitata-visual">
+            <img src="images/creatures/boitata.png" alt="Boitatá" onerror="this.style.display='none'">
+          </div>
+          <div class="creature-body">
+            <h3>Boitatá</h3>
+            <p class="creature-role">Torre de Fogo</p>
+            <p>Cobra de fogo que protege a mata das queimadas — dano em área devastador.</p>
+            <button class="btn btn-small" type="button" data-creature-btn="boitata">Conhecer o Boitatá</button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="more-creatures">E ainda há a Cuca, o Negrinho do Pastoreio, a Mula sem Cabeça e outras figuras à espreita nas próximas atualizações...</p>
+    </div>
+  </section>
+
+  <!-- ===== PROPOSTA ===== -->
+  <section class="section proposal" id="proposta">
+    <div class="section-inner proposal-inner">
+      <div class="proposal-text">
+        <p class="eyebrow">Por que este jogo existe</p>
+        <h2>Um convite para não esquecer</h2>
+        <p>
+          O folclore brasileiro é gigante, vivo e pouco visto nos jogos.
+          <strong>O Brasil Escondido</strong> nasce da vontade de transformar
+          essas histórias em algo jogável, bonito e estratégico — sem
+          perder o respeito pelas raízes de onde elas vêm.
+        </p>
+        <p>
+          Mais do que defender torres, você está defendendo memória:
+          cada lenda salva é uma porta aberta para quem nunca ouviu falar
+          delas, e um reencontro para quem já cresceu escutando.
+        </p>
+        <ul class="proposal-list">
+          <li>Pesquisa junto a fontes de cultura popular brasileira</li>
+          <li>Design original inspirado, nunca copiado, das lendas</li>
+          <li>Biomas reais do Brasil como cenário de jogo</li>
+        </ul>
+      </div>
+      <div class="proposal-card">
+        <p class="proposal-card-title">Em desenvolvimento</p>
+        <p class="proposal-card-desc">
+          Este site será atualizado conforme o jogo evolui. Fique de olho
+          nas próximas criaturas, biomas e mecânicas reveladas aqui primeiro.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer class="site-footer" id="rodape">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">O Brasil Escondido</span>
+      <p>Um Tower Defense inspirado no folclore brasileiro.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Rodapé">
+      <a href="#topo">Início</a>
+      <a href="#sobre">O Jogo</a>
+      <a href="#criaturas">Criaturas</a>
+      <a href="#proposta">Proposta</a>
+    </nav>
+
+    <div class="footer-meta">
+      <p>&copy; <span id="year"></span> O Brasil Escondido. Projeto independente e não oficial.</p>
+      <p class="footer-note">Feito com respeito às tradições populares do Brasil.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
